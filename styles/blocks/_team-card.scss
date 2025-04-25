@@ -1,0 +1,55 @@
+.team-card{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 35px;
+
+    @include card-borders;
+
+    height: 100%;
+
+    @include mobile-s{
+        padding: 40px 50px;
+    }
+
+
+    &__header{
+        display: flex;
+        gap: 20px;
+
+    }
+    &__body{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+    }
+    &__proffesion{
+        font-size: 18px;
+    }
+    &__link{
+        @include flex-center;
+        @include square(34);
+
+        background-color: var(--color-dark);
+        border-radius: 50%;
+        color:  var(--color-lime);
+        margin-left: auto;
+        align-self: start;
+        flex-shrink: 0;
+    }
+    &__description{
+        --marginTopSize: 28px;
+
+        margin-top: var(--marginTopSize);
+        padding-top: var(--marginTopSize);
+        border-top: var(--border);
+
+        @include tablet{
+            --marginTopSize: 20px
+        }
+    }
+}

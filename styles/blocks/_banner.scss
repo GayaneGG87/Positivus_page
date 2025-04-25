@@ -1,0 +1,38 @@
+.banner{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-gray);
+        min-height: 347px;
+        border-radius: var(--border-radius-large);
+        
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 26px;
+        margin: 60px;
+
+        @include mobile{
+            margin: 50px;
+            align-items: stretch;
+        }
+    }
+    &__image{
+        margin-block: -23px;
+
+        @include tablet{
+            max-width: 45%;
+            height: auto;
+        }
+
+        @include mobile{
+            display: none   ;
+        }
+    }
+    &__description{
+        max-width: 500px;
+    }
+}

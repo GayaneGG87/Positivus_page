@@ -1,0 +1,90 @@
+.service-card{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    height: 310px;
+    padding: 50px;
+   @include card-borders;
+
+    @include mobile{
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 27px;
+    }
+
+
+    &__dark-bg{
+        background-color: var(--color-dark);
+    }
+    &__lime-bg{
+        background-color: var(--color-lime);
+    }
+    &__gray-bg{
+        background-color: var(--color-gray);
+    }
+  
+    &__body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 40px;
+
+        @include mobile{
+            display: contents
+        }
+    }
+    &__title{
+        line-height: 1.2;
+        span:first-child{
+            display: block;
+            width: fit-content;
+
+        }
+
+        @include mobile{
+            grid-column: -1/1;
+        }
+    }
+    &__image{
+         @include desktop{
+            width: 50%;
+            height: auto;
+         }
+
+         @include mobile{
+            max-width: 128px;
+            width: unset;
+         }
+    }
+    &__link{
+        font-size: 20px;
+        height: 41px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        @include mobile{
+            align-self: flex-end;
+        }
+
+        &-text{
+            @include mobile{
+                @include visually-hidden
+            }
+        }
+      
+        &__icon__wrapper{
+            color: var(--color-lime);
+            @include flex-center;
+
+            @include square(41);
+            border-radius: 50%;
+        }
+        @include hover{
+            opacity: .6;
+        }
+
+    }
+   
+}

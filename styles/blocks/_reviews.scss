@@ -1,0 +1,42 @@
+.reviews{
+    @include card-borders;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 124px;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding-top: 80px;
+    padding-bottom: 68px;
+
+    @include tablet {
+        padding: 30px 30px 60px 30px;
+        row-gap: 60px;
+    }
+
+    &__slider{
+        overflow: hidden;
+        --reviewSliderCardWidth: 606px;
+        
+        @include tablet {
+            --reviewSliderCardWidth: 328px;
+        }
+        &-list{
+            display: flex;
+            column-gap:50px ;
+            overflow-x: scroll;
+            scroll-snap-align: center;
+
+            @include tablet-above{
+                margin-left: calc(var(--reviewSliderCardWidth) / 2 *-1);
+            }
+
+            @include tablet{
+                column-gap: 30px;
+            }
+        }   
+        &-item{
+            min-width: var(--reviewSliderCardWidth);
+        }
+    }
+}

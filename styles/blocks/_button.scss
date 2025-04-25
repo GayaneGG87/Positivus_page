@@ -1,0 +1,25 @@
+.button{
+    @include flex-center(true);
+
+    text-wrap-mode: nowrap;
+    height: var(--button-height);
+    border: var(--border);
+    border-radius: var(--border-radius-button);
+    padding-inline: 35px;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    cursor: pointer;
+    outline: none;
+
+    @include hover{
+        background-color: var(--color-lime);
+        color: var(--color-dark);
+    }
+    &--transparent{
+        background-color: transparent ;
+        color: var(--color-dark);
+    }
+
+ 
+
+}

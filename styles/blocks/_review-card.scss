@@ -1,0 +1,42 @@
+.review-card{
+    --reviewCardArrowWidth: 40px;
+    --reviewCardPadding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    &__body{
+        @include card-borders;
+        border: 1px solid var(--color-lime);
+        padding: 50px;
+        color: var(--color-light);
+        box-shadow: none;
+        position: relative;
+
+        @include tablet{
+            padding: 30px;
+        }
+
+        &::after{
+            content: '';
+            @include square(40);
+            position: absolute;
+            top: 100%;
+            left: 50px;
+            background-color: var(--color-dark);
+            border: 1px solid var(--color-lime);
+            clip-path: polygon(100% 3%, 0% 100%, 100% 100%);
+            rotate: 45deg;
+            translate: 0 -53%;
+        }
+    }
+    &__footer{
+        display: flex;
+        flex-direction: column;
+        padding-left: calc(var(--reviewCardPadding) + var(--reviewCardArrowWidth) / 2);
+    }
+    &__title,
+    &__company{
+        font-style: normal;
+    }
+}

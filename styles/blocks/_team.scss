@@ -1,0 +1,15 @@
+.team{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: end;
+    &__list{
+        gap: 40px;
+    }
+    &__button{
+        min-width: 270px;
+        @include mobile{
+            width: 100%;
+        }
+    }
+}

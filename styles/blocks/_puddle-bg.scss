@@ -1,0 +1,13 @@
+.puddle-bg{
+    padding-inline: 7px;
+    border-radius: var(--border-radius-small);
+    &__lime{
+        background-color: var(--color-lime);
+    }
+    &__light{
+        background-color: var(--color-light);
+    }
+    &__dark{
+        background-color: var(--color-dark);
+    }
+}
