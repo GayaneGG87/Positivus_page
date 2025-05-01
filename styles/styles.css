@@ -13,6 +13,29 @@
   font-weight: 400;
   src: url("../fonts/SpaceGrotesk-Regular.woff2") format("woff2");
 }
+:root {
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-lime: #B9FF66;
+  --color-gray: #F3F3F3;
+  --color-gray-dark: #292A32;
+  --color-gray-alt: #898989;
+  --transparent: transparent;
+  --container-padding-x: 20px;
+  --container-width: 1240px;
+  --container-padding-y: 70px;
+  --border-radius-large: 45px;
+  --border-radius-small: 7px;
+  --border-radius-button: 14px;
+  --button-height: 68px;
+  --badge-height:51px;
+  --input-height: 59px;
+  --title-margin-bottom: 80px;
+  --transition-duration: 0.2s;
+  --font-family-base: "Space Grotesk", sans-serif;
+  --border: 1px solid black;
+}
+
 body {
   font-size: clamp(16px, 1.4516129032vw, 18px);
   font-family: var(--font-family-base);
@@ -638,11 +661,18 @@ svg * {
 }
 
 .header {
-  margin-top: 60px;
+  padding-top: 60px;
+  background: white;
+  border-bottom: 1px solid var(--color-lime);
+  padding-bottom: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 @media (max-width: 1280px) {
   .header {
-    margin-top: 30px;
+    padding-top: 30px;
   }
 }
 @media (max-width: 1023px) {
@@ -652,7 +682,7 @@ svg * {
 }
 @media (max-width: 767px) {
   .header {
-    margin-top: 15px;
+    padding-top: 15px;
   }
 }
 .header__inner {
@@ -1511,7 +1541,7 @@ svg * {
   translate: -50% -50%;
   height: calc(100% - var(--topOffsetY) * 2);
   aspect-ratio: 1;
-  background: url("./../../images/contact-us.svg") center/contain no-repeat;
+  background: url("./../images/contact-us.svg") center/contain no-repeat;
 }
 @media (max-width: 1023px) {
   .contact-us::after {
